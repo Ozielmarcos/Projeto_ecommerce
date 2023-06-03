@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50%;
+}
+
+header {
+    width: 100%;
+    height: 14vh;
+    color: #fff;
+}
+
+.header-top {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: #131921;
+}
+
+/* header de baixo, para melhor localização */
+.header-bottom {
+    display: flex;
+    align-items: center;
+    background-color: #232F3E;
+    padding: 0 10px;
+    height: 40%;
+}
+
+.header-top div {
+    padding: 0 10px;
+}
+
+.logo,
+.endereco {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: 60px;
+}
+
+.logo:hover,
+.endereco:hover,
+.login:hover,
+.dev-pedidos:hover,
+.carrinho:hover {
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.logo h1 {
+    font-size: 1.1rem;
+    position: relative;
+}
+
+.logo span {
+    font-size: 1.4rem;
+}
+
+.logo h1::before {
+    content: "";
+    width: 80px;
+    height: 2px;
+    background-color: #F3A847;
+    position: absolute;
+    top: -5px;
+    right: 0;
+}
+
+.logo h1::after {
+    content: "";
+    width: 80px;
+    height: 2px;
+    background-color: #F3A847;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.endereco p {
+    font-size: .8rem;
+    color: #c1c1c1;
+}
+
+.location {
+    font-size: 1.2rem;
+    margin: 10px 3px 0 0;
+}
+
+.text {
+    font-size: .9rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.pesquisa {
+    width: 48%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 10px;
+}
+
+.pesquisa input {
+    width: 90%;
+    height: 100%;
+    padding: 5px 10px;
+    font-size: 1rem;
+}
+
+.before-input {
+    background-color: #F3F3F3;
+    color: #131921;
+    width: 10%;
+    height: 97%;
+    margin-left: -10px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    font-size: .7rem;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    cursor: pointer;
+}
+
+.before-input span {
+    font-size: .9rem;
+    margin-left: 5px;
+}
+
+.before-input:hover {
+    background-color: #DADADA;
+}
+
+.after-input {
+    background-color: #FEBD69;
+    padding: 10px;
+    height: 100%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    align-items: center;
+    color: #131921;
+    cursor: pointer;
+    margin-right: -10px;
+}
+
+.after-input span {
+    font-size: 2rem;
+}
+
+.after-input:hover {
+    background-color: #F3A847;
+}
+
+.login,
+.carrinho {
+    width: 180px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 15px;
+}
+
+.login p {
+    font-size: .7rem;
+}
+
+.login p strong {
+    font-size: .9rem;
+}
+
+.login p span {
+    font-size: .8rem;
+}
+
+.dev-pedidos {
+    width: 100px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .7rem;
+    line-height: 15px;
+}
+
+.dev-pedidos strong {
+    font-size: .9rem;
+}
+
+.carrinho span {
+    font-size: 2.8rem;
+    margin-right: 5px;
+}
+
+.carrinho strong {
+    font-size: .9rem;
+    margin-top: 15px;
+}
+
+/* final da estilização do header-top e começo header-bottom */
+
+.header-bottom a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu menu {
+    display: none;
+}
+
+.menu {
+    width: 8rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.menu::after {
+    content: "Todos";
+    color: #fff;
+    font-size: .9rem;
+    font-weight: bold;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.mais-vendidos {
+    width: 60rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: .9rem;
+}
+
+.mais-vendidos a:hover,
+.menu:hover,
+.promocao:hover {
+    border: 1px solid #fff;
+}
+
+.mais-vendidos a {
+    padding: 10px 15px;
+}
+
+.promocao {
+    width: 30rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
