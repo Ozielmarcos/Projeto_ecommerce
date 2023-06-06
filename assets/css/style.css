@@ -9,6 +9,7 @@ body {
     font-size: 50%;
 }
 
+/* começo do header  */
 header {
     width: 100%;
     height: 14vh;
@@ -16,6 +17,7 @@ header {
 }
 
 .header-top {
+    /*header top*/
     width: 100%;
     height: 60%;
     display: flex;
@@ -45,6 +47,7 @@ header {
     height: 60px;
 }
 
+/* estilização dos hovers */
 .logo:hover,
 .endereco:hover,
 .login:hover,
@@ -118,6 +121,7 @@ header {
     height: 100%;
     padding: 5px 10px;
     font-size: 1rem;
+    outline: none;
 }
 
 .before-input {
@@ -165,6 +169,7 @@ header {
     background-color: #F3A847;
 }
 
+/* login  */
 .login,
 .carrinho {
     width: 180px;
@@ -218,6 +223,8 @@ header {
     color: #fff;
 }
 
+/* estilização do submenu TODOS */
+
 .menu .content {
     width: 100%;
     height: 100vh;
@@ -232,6 +239,7 @@ header {
 }
 
 /* Lista de categorias */
+
 .content .list-categories {
     width: 22.5rem;
     height: 100vh;
@@ -267,11 +275,6 @@ header {
     gap: 1rem;
     cursor: pointer;
 }
-
-
-/* .menu menu {
-    display: none;
-} */
 
 .menu {
     width: 8rem;
