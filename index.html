@@ -15,11 +15,12 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
 
 
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <script src="assets/JS/script.js" defer></script>
 </head>
 
 <body>
@@ -44,13 +45,22 @@
             <!-- Barra de pesquisa  -->
             <div class="pesquisa">
 
-                <label class="before-input">
+                <!-- <label class="before-input">
                     Todos
                     <span class="material-symbols-outlined">
                         expand_more </span>
-                </label>
+                </label> -->
+                <select class="before-input" name="todos" id="select-menu-input">
 
-                <input type="text" name="pesquisa" id="procura" placeholder="Pesquise na L.O.com.br">
+                    <option>Todos os departamentos</option>
+                    <option>Informática</option>
+                    <option>Celulares</option>
+                    <option>Alimentos e bebidas</option>
+                    <option>Eletro Eletrônicos</option>
+
+                </select>
+
+                <input type="text-input" name="pesquisa" id="procura" placeholder="Pesquise na L.O.com.br">
 
                 <div class="after-input">
                     <span class="material-symbols-outlined">
@@ -59,6 +69,8 @@
                 </div>
 
             </div>
+            <!-- fim da barra de pesquisa -->
+
             <!-- Login  -->
             <div class="login">
                 <p>Olá, faça seu login <br>
@@ -79,39 +91,64 @@
                 </span><strong>Carrinho</strong>
             </div>
         </div>
+        <!-- Fim da parte superior do header  -->
 
         <!-- Parte de baixo do header  -->
 
         <div class="header-bottom">
-
+            <!-- Menu que abre as categorias  -->
             <div class="menu">
-                <a href="#"> <span class="material-symbols-outlined">
-                        menu </span>
+                <a href="javascript:mostrar()"> <span class="material-symbols-outlined">
+                        menu </span> Todos
+                </a>
+                <!-- Div conteúdo que deve aparecer qndo abrir menu  -->
+                <div class="content">
 
-                    <div class="content">
+                    <div class="list-categories">
 
-                        <div class="list-categories">
-
-                            <div class="subtitulo">
-                                <h4><img class="foto-login" src="assets/img/foto-login.png" alt="foto login"> Olá,faça
-                                    seu login</h4>
-                            </div>
-
-                            <div class="categorias">
-                                <menu>
-                                    <li>1</li>
-                                    <li>2</li>
-                                    <li>3</li>
-                                    <li>4</li>
-                                </menu>
-                            </div>
+                        <div class="subtitulo">
+                            <h4><img class="foto-login" src="assets/img/foto-login.png" alt="foto login"> Olá,faça
+                                seu login</h4>
                         </div>
-                        <span class="material-symbols-outlined close">
-                            close </span>
+
+                        <div class="categorias">
+
+                            <div class="box">
+                                <h3>Destaques</h3>
+                                <nav>
+                                    <a href="">Mais Vendidos</a>
+                                    <a href="">Novidades na L.O</a>
+                                    <a href="">Produtos em alta</a>
+                                </nav>
+                            </div>
+
+                            <div class="box">
+                                <h3>Comprar por Categoria</h3>
+                                <nav>
+                                    <a href="">Informática</a>
+                                    <a href="">Celulares</a>
+                                    <a href="">Alimentos e Bebidas</a>
+                                    <a href="">Eletro Eletrônicos</a>
+                                </nav>
+                            </div>
+
+                            <div class="box">
+                                <h3>Ajuda e Configurações</h3>
+                                <nav>
+                                    <a href="">Ajuda</a>
+                                    <a href="">Sua Conta</a>
+                                    <a href="">Faça seu login</a>
+                                </nav>
+                            </div>
+
+                        </div>
                     </div>
 
-                </a>
+                    <span class="material-symbols-outlined close">
+                        close </span>
+                </div>
             </div>
+
             <!-- Links -->
             <nav class="mais-vendidos">
                 <a href="#">Mais Vendidos</a>

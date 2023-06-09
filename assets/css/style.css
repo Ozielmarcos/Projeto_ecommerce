@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
     font-size: 50%;
 }
 
@@ -26,35 +26,22 @@ header {
     background-color: #131921;
 }
 
-/* header de baixo, para melhor localização */
-.header-bottom {
-    display: flex;
-    align-items: center;
-    background-color: #232F3E;
-    padding: 0 10px;
-    height: 40%;
-}
-
 .header-top div {
     padding: 0 10px;
 }
 
-.logo,
-.endereco {
+.logo {
     display: flex;
     align-items: center;
-    width: 200px;
+    width: 15%;
     height: 60px;
 }
 
-/* estilização dos hovers */
-.logo:hover,
-.endereco:hover,
-.login:hover,
-.dev-pedidos:hover,
-.carrinho:hover {
-    border: 1px solid #fff;
-    cursor: pointer;
+.endereco {
+    width: 16%;
+    height: 60px;
+    display: flex;
+    align-items: center;
 }
 
 .logo a {
@@ -101,25 +88,27 @@ header {
     margin: 10px 3px 0 0;
 }
 
-.text {
+.text-input {
     font-size: .9rem;
     font-weight: bold;
     color: #fff;
 }
 
 .pesquisa {
-    width: 48%;
+    max-width: 60%;
+    width: 60%;
+    min-width: 20%;
+    width: 60%;
     height: 80%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     margin: 0 10px;
 }
 
 .pesquisa input {
-    width: 90%;
+    width: 100%;
     height: 100%;
-    padding: 5px 10px;
+    padding: 5px;
     font-size: 1rem;
     outline: none;
 }
@@ -127,21 +116,15 @@ header {
 .before-input {
     background-color: #F3F3F3;
     color: #131921;
-    width: 10%;
     height: 97%;
-    margin-left: -10px;
-    padding: 5px 10px;
+    padding: 5px;
     display: flex;
     align-items: center;
     font-size: .7rem;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     cursor: pointer;
-}
-
-.before-input span {
-    font-size: .9rem;
-    margin-left: 5px;
+    outline: none;
 }
 
 .before-input:hover {
@@ -169,14 +152,13 @@ header {
     background-color: #F3A847;
 }
 
-/* login  */
+/* login e carrinho  */
 .login,
 .carrinho {
     width: 180px;
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
     line-height: 15px;
 }
 
@@ -193,7 +175,7 @@ header {
 }
 
 .dev-pedidos {
-    width: 100px;
+    width: 10%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -216,16 +198,38 @@ header {
     margin-top: 15px;
 }
 
+/* estilização dos hovers */
+.logo:hover,
+.endereco:hover,
+.login:hover,
+.dev-pedidos:hover,
+.carrinho:hover {
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
 /* final da estilização do header-top e começo header-bottom */
+
+/* header de baixo, para melhor localização */
+.header-bottom {
+    display: flex;
+    align-items: center;
+    background-color: #232F3E;
+    padding: 0 10px;
+    height: 40%;
+}
 
 .header-bottom a {
     text-decoration: none;
     color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 /* estilização do submenu TODOS */
 
-.menu .content {
+.content {
     width: 100%;
     height: 100vh;
     background-color: #000000c9;
@@ -235,13 +239,19 @@ header {
     left: 0;
     cursor: default;
     visibility: hidden;
+    z-index: 1;
     /* div escondida */
+}
+
+/* estilização para função do submenu */
+.mostrar_div {
+    visibility: visible;
 }
 
 /* Lista de categorias */
 
 .content .list-categories {
-    width: 22.5rem;
+    width: 22.8rem;
     height: 100vh;
     background-color: #fff;
     box-shadow: 0 0 5px #000;
@@ -252,10 +262,12 @@ header {
     color: #fff;
     font-size: 2rem;
     position: absolute;
-    top: 10px;
-    left: 22.8rem;
+    top: .9rem;
+    left: 23.4rem;
     cursor: pointer;
 }
+
+/* Começo da div Conteudo, escondida */
 
 .subtitulo {
     width: 100%;
@@ -263,35 +275,58 @@ header {
 }
 
 .foto-login {
-    width: 2rem;
+    width: 1.5rem;
     filter: invert(100%);
 }
 
 .subtitulo h4 {
     font-size: 1.2rem;
-    padding: 5px 20px;
+    padding: .9rem 2rem;
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: .9rem;
     cursor: pointer;
+}
+
+/* estilização da box  */
+
+.box h3,
+.box nav a {
+    color: #232F3E;
+    font-size: .9rem;
+    padding: 1rem 2rem;
+}
+
+.box h3 {
+    font-size: 1.1rem;
+    cursor: auto;
+}
+
+.box nav {
+    display: flex;
+    flex-direction: column;
+    /* gap: 1.5rem; */
+    padding-bottom: .5rem;
+    border-bottom: 1px solid #232F3E;
+}
+
+.box nav a:hover {
+    background-color: #DADADA;
+}
+
+.categorias {
+    height: 92vh;
+    overflow: scroll;
 }
 
 .menu {
     width: 8rem;
     height: 100%;
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
-
-}
-
-.menu::after {
-    content: "Todos";
-    color: #fff;
     font-size: .9rem;
     font-weight: bold;
-    margin-left: 5px;
-    cursor: pointer;
 }
 
 .mais-vendidos {
